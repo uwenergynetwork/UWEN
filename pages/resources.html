@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Josefin Sans" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../images/util/favicon.ico">
+    <link href="../style.css" rel="stylesheet">
+    <title>UW Energy Network</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Open/Close Nav Sidebar
+        function closeNav() {
+            document.getElementById("side-nav").style.width = "0";
+        }
+
+        function openNav() {
+            document.getElementById("side-nav").style.width = "100vw";
+        }
+    </script>
+    <div id="side-nav"> 
+        <div class="close-button">
+            <a href="javascript:void(0)" class="close-button" onclick="closeNav()">
+                <img class="close-icon" src="../images/util/close.svg">
+            </a>
+        </div>
+        <div class="nav-items">
+            <a class="nav-link" onclick="closeNav()" href="../index.html"><h5>Home</h5></a>
+            <a class="nav-link" onclick="closeNav()" href="./resources.html"><h5>Resources</h5></a>
+            <a class="nav-link" onclick="closeNav()" href=""><h5>Events</h5></a>
+            <a class="navbar-button" target="_blank" href="https://open.spotify.com/show/1uDSNNDeTDdMln4oif5KaD?si=558031740b4647de">PODCAST</a>    
+        </div>
+    </div>
+    <nav>
+        <h4 class="navbar-title">UW Energy Network</h4>
+        <div class="nav-row">
+            <a class="nav-link" href="../index.html"><h5>Home</h5></a>
+            <a class="nav-link" href="./resources.html"><h5>Resources</h5></a>
+            <a class="nav-link" href=""><h5>Events</h5></a>
+            <a class="navbar-button" target="_blank" href="https://open.spotify.com/show/1uDSNNDeTDdMln4oif5KaD?si=558031740b4647de">PODCAST</a>
+        </div>
+        <div class="nav-menu">
+            <a onclick="openNav()">
+                <img class="instagram" src="../images/util/menu.svg">
+            </a>
+        </div>
+    </nav>
+    <div class="banner half-banner">
+        <h1>Resources</h1>
+    </div>
+    <div class="heading">
+        <h2>Scholarships</h2>
+    </div>
+    <div class="card-wrapper wide">
+        <div class="team-text" style="display: flex; align-self: center;">
+            <p>School is expensive. Finding scholarships is hard. Hope we can help out a little bit with some ideas here! Remember to always check Waterloo’s Undergraduate Awards Database as a main source for scholarships! Please contact us if you know of any relevant scholarships that are missing.</p>
+        </div>
+        <div class="scholarship-box">
+            <a class="navbar-button" target="_blank" href="https://docs.google.com/document/d/1sGGKht9-zVopDfvcwYRMHCArmLndWARYgo5-_VQfsMo/">VIEW SCHOLARSHIPS</a>
+        </div>
+    </div>
+    <div class="heading">
+        <h2>Organizations</h2>
+    </div>
+    <div class="card-wrapper wide">
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="../images/util/banner.webp">
+            </div>
+            <div class="card-text">
+                <h5>January 25, 2024</h5>
+                <h4>Renewable Energy Careers Panel</h4>
+                <p>UWEN is a collective seeking to connect students with opportunities to accelerate sustainable innovation and just transitions in the energy sector. We enjoy learning about clean energy through engaging discussions with faculty members and industry partners; visiting active projects; and participating in energy challenges.  We are excited to think of creative solutions to address clean energy access challenges all over Canada and the world. We believe that reliable energy access is foundational to emPOWERing our communities, and meeting global socio-economic and environmental goals!</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div></div>
+        <div style="display: flex; justify-content: center;">
+            <p style="color: white;">UWEN @
+                <script>document.write(new Date().getFullYear())</script>
+            </p>
+        </div>
+        <div style="display: flex; justify-content: flex-end;">
+            <a target="_blank" href="https://www.instagram.com/uwenergynetwork/?hl=en">
+                <img class="instagram" src="../images/util/instagram.svg">
+            </a>
+            <a href="mailto: uwenergynetwork@gmail.ca">
+                <img class="email" src="../images/util/email.svg">
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
