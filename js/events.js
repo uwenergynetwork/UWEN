@@ -1,7 +1,7 @@
 import { events } from "../info/eventsInfo.js";
 
-const upcomingEvents = events.sort((a,b) => new Date(a.date).getTime() - new Date(b.date).getTime()).filter(x => new Date(x.date).getTime() >= Math.floor(new Date().getTime() / 144000) * 144000);
-const pastEvents = events.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime()).filter(x => new Date(x.date).getTime() < Math.floor(new Date().getTime() / 144000) * 144000);
+const upcomingEvents = events.sort((a,b) => getDate(a.date) - getDate(b.date)).filter(x => getDate(x.date) >= getDate());
+const pastEvents = events.sort((a,b) => getDate(b.date) - getDate(a.date)).filter(x => getDate(x.date) < getDate());
 
 function formatDate(input) {
     const date = new Date(input);
@@ -15,6 +15,13 @@ function formatDate(input) {
     return formattedDate;
 }
 
+function getDate(input = "") {
+    if (input === "") {
+        return Math.floor(new Date().getTime() / 86400000) * 86400000;
+    } else {
+        return Math.floor(new Date(input).getTime() / 86400000) * 86400000;
+    }
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     // Remove unused headings
@@ -42,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const templateImage = newCard.getElementById("event-image");
         const templateLocation = newCard.getElementById("event-location");
 
-        templateDate.innerText = formatDate(data.date);
+        templateDate.innerText = formatDate(getDate(data.date));
         templateTitle.innerText = data.title;
         templateDescription.innerText = data.description;
         templateImage.src = "../images/events/" + data.imageFile;
@@ -62,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const templateImage = newCard.getElementById("event-image");
         const templateLocation = newCard.getElementById("event-location");
 
-        templateDate.innerText = formatDate(data.date);
+        templateDate.innerText = formatDate(getDate(data.date));
         templateTitle.innerText = data.title;
         templateDescription.innerText = data.description;
         templateImage.src = "../images/events/" + data.imageFile;

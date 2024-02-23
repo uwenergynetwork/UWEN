@@ -1,26 +1,5 @@
 export const events = [
     {
-        "date": "2024-02-24",
-        "title": "Sustainable Finance Market Game",
-        "description": "We will be going over sustainable finance with a focus on the impacts on the energy industry and playing a Stock Market game where we will have the chance to \"invest\" 100$ into different investment opportunities and then track those investments over a simulated year to see how different investments are impacted by world events!",
-        "imageFile": "sustainable-finance.webp",
-        "location": "EV1 350 & Microsoft Teams",
-    },
-    {
-        "date": "2024-02-23",
-        "title": "Sustainable Finance Market Game",
-        "description": "We will be going over sustainable finance with a focus on the impacts on the energy industry and playing a Stock Market game where we will have the chance to \"invest\" 100$ into different investment opportunities and then track those investments over a simulated year to see how different investments are impacted by world events!",
-        "imageFile": "sustainable-finance.webp",
-        "location": "EV1 350 & Microsoft Teams",
-    },
-    {
-        "date": "2024-02-22",
-        "title": "Sustainable Finance Market Game",
-        "description": "We will be going over sustainable finance with a focus on the impacts on the energy industry and playing a Stock Market game where we will have the chance to \"invest\" 100$ into different investment opportunities and then track those investments over a simulated year to see how different investments are impacted by world events!",
-        "imageFile": "sustainable-finance.webp",
-        "location": "EV1 350 & Microsoft Teams",
-    },
-    {
         "date": "2023-11-21",
         "title": "Sustainable Finance Market Game",
         "description": "We will be going over sustainable finance with a focus on the impacts on the energy industry and playing a Stock Market game where we will have the chance to \"invest\" 100$ into different investment opportunities and then track those investments over a simulated year to see how different investments are impacted by world events!",
