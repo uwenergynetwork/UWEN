@@ -1,7 +1,7 @@
 import { events } from "../info/eventsInfo.js";
 
-const upcomingEvents = events.sort((a,b) => new Date(a.date).getTime() - new Date(b.date).getTime()).filter(x => new Date(x.date).getTime() >= new Date().getTime());
-const pastEvents = events.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime()).filter(x => new Date(x.date).getTime() < new Date().getTime());
+const upcomingEvents = events.sort((a,b) => new Date(a.date).getTime() - new Date(b.date).getTime()).filter(x => new Date(x.date).getTime() >= Math.floor(new Date().getTime() / 144000) * 144000);
+const pastEvents = events.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime()).filter(x => new Date(x.date).getTime() < Math.floor(new Date().getTime() / 144000) * 144000);
 
 function formatDate(input) {
     const date = new Date(input);
@@ -40,11 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const templateTitle = newCard.getElementById("event-title");
         const templateDescription = newCard.getElementById("event-description");
         const templateImage = newCard.getElementById("event-image");
+        const templateLocation = newCard.getElementById("event-location");
 
         templateDate.innerText = formatDate(data.date);
         templateTitle.innerText = data.title;
         templateDescription.innerText = data.description;
         templateImage.src = "../images/events/" + data.imageFile;
+        if (data.location !== "") {
+            templateLocation.innerHTML = "<strong>Location:</strong> " + data.location;
+        }
         upcomingEventsFragment.append(newCard);
     });
 
@@ -56,11 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const templateTitle = newCard.getElementById("event-title");
         const templateDescription = newCard.getElementById("event-description");
         const templateImage = newCard.getElementById("event-image");
+        const templateLocation = newCard.getElementById("event-location");
 
         templateDate.innerText = formatDate(data.date);
         templateTitle.innerText = data.title;
         templateDescription.innerText = data.description;
         templateImage.src = "../images/events/" + data.imageFile;
+        if (data.location !== "") {
+            templateLocation.innerHTML = "<strong>Location:</strong> " + data.location;
+        }
         pastEventsFragment.append(newCard);
     });
 
