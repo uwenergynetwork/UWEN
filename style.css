@@ -96,7 +96,7 @@ footer>*>p {
 .banner {
     background-image: url("images/util/banner.webp");
     background-size: cover;
-    background-position: center center;
+    background-position: bottom center; 
     max-height: 1200px;
 }
 
