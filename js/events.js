@@ -1,23 +1,7 @@
 import { events } from "../info/eventsInfo.js";
 
-const upcomingEvents = events.sort((a,b) => newDate(a.date).getTime() - newDate(b.date).getTime()).filter(x => newDate(x.date).getTime() >= midnight().getTime());
-const pastEvents = events.sort((a,b) => newDate(b.date).getTime() - newDate(a.date).getTime()).filter(x => newDate(x.date).getTime() < midnight().getTime());
-
-console.log({upcomingEvents, pastEvents});
-
-function midnight() {
-    let date = new Date();
-    date.setHours(0);
-    date.setMinutes(0);
-    date.setSeconds(0);
-    return date;
-}
-
-function newDate(input) {
-    let date = new Date(input);
-    date.setHours(25);
-    return date;
-}
+const upcomingEvents = events.sort((a,b) => new Date(a.date).getTime() - new Date(b.date).getTime()).filter(x => new Date(x.date).getTime() >= new Date().getTime());
+const pastEvents = events.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime()).filter(x => new Date(x.date).getTime() < new Date().getTime());
 
 function formatDate(input) {
     const date = new Date(input);
