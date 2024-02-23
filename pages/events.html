@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin Sans" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../images/util/favicon.ico">
     <link href="../style.css" rel="stylesheet">
+    <script src="../js/events.js" type="module" defer></script> 
     <title>UW Energy Network</title>
 </head>
 
@@ -91,8 +92,14 @@
             <div class="team-text">
                 <h5>Monthly</h5>
                 <h4>Tours of Evolv1</h4>
-                <p>Evolv1 is Canada's first Zero Carbon Building - Design and Performance Certified, Net Positive. A uniquely modern 104,000 square foot urban space designed for today's millennial tech-savvy workforce.</p>
-                <p>We connected with Sustainable Waterloo Region to offer a tour for Waterloo students! We learned all about the building's passive heating and geothermal systems, photovoltaic carports, and so many more innovative energy efficiency programs and design considerations. Fun fact, on a -30 degree winter day, Evolv1 was able to turn off its heating system and rely solely on passive solar energy to keep the building cozy.</p>
+                <p>Evolv1 is Canada's first Zero Carbon Building - Design and Performance Certified, Net Positive. A
+                    uniquely modern 104,000 square foot urban space designed for today's millennial tech-savvy
+                    workforce.</p>
+                <p>We connected with Sustainable Waterloo Region to offer a tour for Waterloo students! We learned all
+                    about the building's passive heating and geothermal systems, photovoltaic carports, and so many more
+                    innovative energy efficiency programs and design considerations. Fun fact, on a -30 degree winter
+                    day, Evolv1 was able to turn off its heating system and rely solely on passive solar energy to keep
+                    the building cozy.</p>
                 <p>Stay tuned for more tours scheduled!</p>
             </div>
         </div>
@@ -100,45 +107,25 @@
     <div class="heading">
         <h2>Upcoming Events</h2>
     </div>
-    <div class="card-wrapper wide">
-        <div class="two-column">
-            <div class="image-wrapper">
-                <img src="../images/util/banner.webp">
-            </div>
-            <div class="team-text">
-                <h5>January 25, 2024</h5>
-                <h4>Renewable Energy Careers Panel</h4>
-                <p>UWEN is a collective seeking to connect students with opportunities to accelerate sustainable
-                    innovation and just transitions in the energy sector. We enjoy learning about clean energy through
-                    engaging discussions with faculty members and industry partners; visiting active projects; and
-                    participating in energy challenges. We are excited to think of creative solutions to address clean
-                    energy access challenges all over Canada and the world. We believe that reliable energy access is
-                    foundational to emPOWERing our communities, and meeting global socio-economic and environmental
-                    goals!</p>
-            </div>
-        </div>
-    </div>
+    <div id="upcoming-events"></div>
     <div class="heading">
         <h2>Past Events</h2>
     </div>
-    <div class="card-wrapper wide">
-        <div class="two-column">
-            <div class="image-wrapper">
-                <img src="../images/util/banner.webp">
-            </div>
-            <div class="team-text">
-                <h5>January 25, 2024</h5>
-                <h4>Renewable Energy Careers Panel</h4>
-                <p>UWEN is a collective seeking to connect students with opportunities to accelerate sustainable
-                    innovation and just transitions in the energy sector. We enjoy learning about clean energy through
-                    engaging discussions with faculty members and industry partners; visiting active projects; and
-                    participating in energy challenges. We are excited to think of creative solutions to address clean
-                    energy access challenges all over Canada and the world. We believe that reliable energy access is
-                    foundational to emPOWERing our communities, and meeting global socio-economic and environmental
-                    goals!</p>
+    <div id="past-events"></div>
+    <template id="event-template">
+        <div class="card-wrapper wide">
+            <div class="two-column">
+                <div class="image-wrapper">
+                    <img id="event-image">
+                </div>
+                <div class="team-text">
+                    <h5 id="event-date"></h5>
+                    <h4 id="event-title"></h4>
+                    <p id="event-description"></p>
+                </div>
             </div>
         </div>
-    </div>
+    </template>
     <footer>
         <div style="display: flex; justify-content: flex-start;">
             <a target="_blank" href="https://discord.com/invite/5TD6aesST9">
