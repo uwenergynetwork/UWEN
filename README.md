@@ -8,7 +8,7 @@ See Designs: https://www.figma.com/file/fol19GgzxT2saUJj9nMSjf/UWEN-Design?type=
 2. Update JSON objects with new information
 
 ### Team Member Template - `team.js`
-```json
+```javascript
 {
         "position": "", // Required
         "name": "", // Required
@@ -20,7 +20,7 @@ See Designs: https://www.figma.com/file/fol19GgzxT2saUJj9nMSjf/UWEN-Design?type=
 
 ### Event Template - `eventsInfo.js`
 Note: Events are auto sorted so the order in the file does not affect the order on the page
-```json
+```javascript
 {
         "date": "", // Required
         "title": "", // Required
@@ -31,7 +31,7 @@ Note: Events are auto sorted so the order in the file does not affect the order 
 ```
 
 ### Organization Template - `eventsInfo.js`
-```json
+```javascript
 {
         "title": "", // Required
         "description": "", // Required
@@ -40,7 +40,7 @@ Note: Events are auto sorted so the order in the file does not affect the order 
 ```
 
 ### Contact Template - `contacts.js`
-```json
+```javascript
 {
         "title": "", // Required
         "description": "", // Required 
