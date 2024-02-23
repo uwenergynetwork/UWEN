@@ -1,18 +1,18 @@
 export const events = [
     {
-        "date": "2024-02-25",
+        "date": "2024-03-25",
         "title": "Renewable Energy Careers Panel!",
         "description": "initiative.",
         "imageFile": "ae4h.webp",
     },
     {
-        "date": "2024-02-22",
+        "date": "2024-03-22",
         "title": "Renewable Energy Careers Panel!",
         "description": "initiative.",
         "imageFile": "ae4h.webp",
     },
     {
-        "date": "2024-02-23",
+        "date": "2024-03-23",
         "title": "Renewable Energy Careers Panel!",
         "description": "initiative.",
         "imageFile": "ae4h.webp",

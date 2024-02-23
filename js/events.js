@@ -15,7 +15,19 @@ function formatDate(input) {
     return formattedDate;
 }
 
+
 document.addEventListener("DOMContentLoaded", function () {
+    // Remove unused headings
+    if (upcomingEvents.length < 1) {
+        const eventHeading = document.getElementById("upcoming-events-heading");
+        eventHeading.style = "display: none;"
+    }
+    if (pastEvents.length < 1) {
+        const eventHeading = document.getElementById("past-events-heading");
+        eventHeading.style = "display: none;"
+    }
+
+    // Create cards
     const cardTemplate = document.getElementById("event-template");
     const upcomingEventsContainer = document.getElementById("upcoming-events");
     const pastEventsContainer = document.getElementById("past-events");
