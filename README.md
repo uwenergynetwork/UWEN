@@ -30,7 +30,7 @@ Note: Events are auto sorted so the order in the file does not affect the order 
 },
 ```
 
-### Organization Template - `eventsInfo.js`
+### Organization Template - `organizations.js`
 ```javascript
 {
         "title": "", // Required
